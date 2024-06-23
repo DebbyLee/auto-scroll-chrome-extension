@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Scrolling Tab",
+  "version": "1.0",
+  "description": "Auto Scrolling Tab up and down",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_title": "Click to start to start scrollong and stop to stop the action",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
+
